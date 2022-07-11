@@ -1,0 +1,46 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root{
+  --first-color: #FF5D5D;
+  --second-color: #FF8C8C;
+}
+@font-face {
+  font-family: 'FuenteLogo';
+  src: local('FuenteLogo'), 
+       local('FuenteLogo'), 
+       url('../public/Fuente.ttf') format('truetype'); 
+}
+.Logo{
+  font-family: 'FuenteLogo';
+}
+.fondo{
+  background-color: var(--first-color);
+}
+.contenedor{
+  background-color: var(--second-color);
+}
+.contenedor::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+.contenedor::-webkit-scrollbar-track {
+  background: var(--second-color);        /* color of the tracking area */
+}
+.contenedor::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid var(--second-color);  /* creates padding around scroll thumb */
+}
