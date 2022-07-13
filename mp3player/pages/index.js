@@ -40,7 +40,7 @@ export default function Home() {
           :<button type="button" onClick={()=> setOption(2)} className="btn btn-outline-primary fw-bolder">Por Categorias</button>
         }
         <div className='contenedor overflow-auto h-100 p-3'>
-          {option===1&&
+          {option===1&&listado.length!==0&&
             <List listado={listado} setListado={setListado} orden={orden} setOrden={setOrden} cancionGlobal={cancion} setCancionGlobal={setCancion}/>
           }
           {option===2&&<Folders setCategoria={setCategoria} setListado={setListado} setOption={setOption}/>}
