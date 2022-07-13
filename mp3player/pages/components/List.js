@@ -39,6 +39,9 @@ const List=({listado,setListado,orden,setOrden,cancionGlobal,setCancionGlobal})=
             setListado(arr2)
         }
     }
+    function ReproducirCancion(){
+        
+    }
     return(
     <div>
         {listado!==[]&&
