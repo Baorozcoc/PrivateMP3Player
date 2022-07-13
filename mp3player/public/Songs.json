@@ -1,0 +1,13 @@
+{
+    "songs":[
+        {"ID":0,"Titulo":"Gitana","Autor":"Willie Colón","Duracion":416, "Categoria":"Salsa","Ubicacion":"/Songs/Salsa/Gitana.mp3"},
+        {"ID":1,"Titulo":"Sin poderte hablar","Autor":"Willie Colón","Duracion":324, "Categoria":"Salsa","Ubicacion":"/Songs/Salsa/Sin poderte hablar.mp3"},
+        {"ID":2,"Titulo":"La Primera Vez","Autor":"Jose Luis Perales","Duracion":217, "Categoria":"Romantica","Ubicacion":"/Songs/Romantica/La Primera Vez.mp3"},
+        {"ID":3,"Titulo":"Oh,que será","Autor":"Willie Colón","Duracion":368, "Categoria":"Salsa","Ubicacion":"/Songs/Salsa/Oh,que será.mp3"},
+        {"ID":4,"Titulo":"Quiero Ser Agua Fresca","Autor":"Jose Luis Perales","Duracion":221, "Categoria":"Romantica","Ubicacion":"/Songs/Romantica/Quiero Ser Agua Fresca.mp3"},
+        {"ID":5,"Titulo":"A Quien Le Importara","Autor":"Jose Luis Perales","Duracion":155, "Categoria":"Romantica","Ubicacion":"/Songs/Romantica/A Quien Le Importara.mp3"},
+        {"ID":6,"Titulo":"Sabor a mi","Autor":"Monsieur Perine","Duracion":228, "Categoria":"Pop","Ubicacion":"/Songs/Pop/Sabor a mi.mp3"},
+        {"ID":7,"Titulo":"Me Dedique A Perderte","Autor":"Alejandro Fernández","Duracion":265, "Categoria":"Pop","Ubicacion":"/Songs/Pop/Me Dedique A Perderte.mp3"},
+        {"ID":8,"Titulo":"Corazón Partío","Autor":"Alejandro Sanz","Duracion":346, "Categoria":"Pop","Ubicacion":"/Songs/Pop/Corazón Partío.mp3"}
+    ]
+}

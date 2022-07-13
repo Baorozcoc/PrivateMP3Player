@@ -13,10 +13,12 @@ a {
 
 * {
   box-sizing: border-box;
+  transition:all 0.4s ease;
 }
 :root{
-  --first-color: #FF5D5D;
-  --second-color: #FF8C8C;
+  --first-color: #DCD7C9;
+  --second-color: #A27B5C;
+  
 }
 @font-face {
   font-family: 'FuenteLogo';
@@ -43,4 +45,11 @@ a {
   background-color: var(--first-color);    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid var(--second-color);  /* creates padding around scroll thumb */
+}
+.toChoose{
+  cursor:pointer;
+  
+}
+.toChoose:hover{
+  transform: scale(0.98);
 }
