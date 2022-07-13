@@ -8,7 +8,7 @@ export default function Home() {
   const [orden, setOrden]=useState("Antiguo"); //Orden de reproducción
   const [siguiente, setSiguiente]=useState(""); //Nombre siguiente canción
   const [anterior, setAnterior]=useState("");//Nombre anterior canción
-  const [listado, setListado]=useState([]); //Listado de canciones
+  const [listado, setListado]=useState([{"ID":0,"Titulo":"Gitana","Autor":"Willie Colón","Duracion":416, "Categoria":"Salsa","Ubicacion":"/Songs/Salsa/Gitana.mp3"}]); //Listado de canciones
   const [cancion, setCancion]=useState(null); //Canción actual
   const [autor, setAutor]=useState(""); //Autor canción actual
   const [duracion, setDuracion]=useState(0); //Duración canción actual
