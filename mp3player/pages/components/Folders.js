@@ -24,29 +24,25 @@ const Folders=({setCategoria,setListado,setOption})=>{
             case 4:
                 document.documentElement.style.setProperty('--first-color', '#E7AB79');
                 document.documentElement.style.setProperty('--second-color', '#B25068');
-                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Pop"));
-                //setListado(Songs.songs.filter(cancion=>cancion.Categoria==="RockEng"));
+                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="RockEng"));
                 setCategoria("RockEng");
                 break;
             case 5:
                 document.documentElement.style.setProperty('--first-color', '#FFE5B4');
                 document.documentElement.style.setProperty('--second-color', '#E8AA42');
-                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Pop"));
-                //setListado(Songs.songs.filter(cancion=>cancion.Categoria==="RockEsp"));
+                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="RockEsp"));
                 setCategoria("RockEsp");
                 break;   
             case 6:
                 document.documentElement.style.setProperty('--first-color', '#B3E8E5');
                 document.documentElement.style.setProperty('--second-color', '#3BACB6');
-                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Pop"));
-                //setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Electrosw")); 
+                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Electrosw")); 
                 setCategoria("Electrosw");   
                 break;
             case 7:
                 document.documentElement.style.setProperty('--first-color', '#EEEEEE');
                 document.documentElement.style.setProperty('--second-color', '#476072');
-                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Pop"));
-                //setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Instrumental"));
+                setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Instrumental"));
                 setCategoria("Instrumental");    
                 break;
         }
