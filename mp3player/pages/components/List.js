@@ -65,6 +65,7 @@ const List=({listado,setListado,orden,setOrden,cancionGlobal,setCancionGlobal})=
                 <Song key={index} Titulo={cancion.Titulo} Autor={cancion.Autor} Duracion={cancion.Duracion} Categoria={cancion.Categoria} Ubicacion={cancion.Ubicacion} setCancion={setCancionGlobal}/>
             ))}
             {cancionGlobal!==null&&<button className="btn btn-outline-primary" onClick={()=> cancionGlobal.play()}>Reproducir </button>}
+            {cancionGlobal!==null&&<button className="btn btn-outline-primary" onClick={()=> cancionGlobal.pause()}>Pause </button>}
         </div>
         }
     </div>

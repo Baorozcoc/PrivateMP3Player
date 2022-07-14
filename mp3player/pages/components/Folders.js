@@ -50,14 +50,14 @@ const Folders=({setCategoria,setListado,setOption})=>{
 
     }
     return(
-        <div className="my-3">
-            <div className="bg-primary rounded-3 p-2 h3 text-light toChoose" onClick={()=> Select(1)}>Salsa</div>
-            <div className="bg-secondary rounded-3 p-2 h3 text-light toChoose" onClick={()=> Select(2)}>Romántica</div>
-            <div className="bg-success rounded-3 p-2 h3 text-light toChoose" onClick={()=> Select(3)}>Pop</div>
-            <div className="bg-info rounded-3 p-2 h3 text-light toChoose" onClick={()=> Select(4)}>Rock en Inglés</div>
-            <div className="bg-warning rounded-3 p-2 h3 text-light toChoose" onClick={()=> Select(5)}>Rock en Español</div>
-            <div className="bg-danger rounded-3 p-2 h3 text-light toChoose" onClick={()=> Select(6)}>Electroswing</div>
-            <div className="bg-dark rounded-3 p-2 h3 text-light toChoose" onClick={()=> Select(7)}>Instrumental</div>
+        <div className="my-3 h-50 d-flex flex-wrap">
+            <div className="bg-primary rounded-3 m-2 p-2 h2 h-75 d-inline-flex align-items-end text-light toChoose Folder Salsa" onClick={()=> Select(1)}>Salsa</div>
+            <div className="bg-secondary rounded-3 m-2 p-2 h2 h-75 d-inline-flex align-items-end text-light toChoose Folder Roman" onClick={()=> Select(2)}>Romántica</div>
+            <div className="bg-success rounded-3 m-2 p-2 h2 h-75 d-inline-flex align-items-end text-light toChoose Folder Pop" onClick={()=> Select(3)}>Pop</div>
+            <div className="bg-info rounded-3 m-2 p-2 h2 h-75 d-inline-flex align-items-end text-light toChoose Folder Rock" onClick={()=> Select(4)}>Rock en Inglés</div>
+            <div className="bg-warning rounded-3 m-2 p-2 h2 h-75 d-inline-flex align-items-end text-light toChoose Folder RockEsp" onClick={()=> Select(5)}>Rock en Español</div>
+            <div className="bg-danger rounded-3 m-2 p-2 h2 h-75 d-inline-flex align-items-end text-light toChoose Folder Electro" onClick={()=> Select(6)}>Electroswing</div>
+            <div className="bg-dark rounded-3 m-2 p-2 h2 h-75 d-inline-flex align-items-end text-light toChoose Folder Instrum" onClick={()=> Select(7)}>Instrumental</div>
         </div>
     )
 }

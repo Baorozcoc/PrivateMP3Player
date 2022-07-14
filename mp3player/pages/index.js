@@ -44,7 +44,14 @@ export default function Home() {
             <List listado={listado} setListado={setListado} orden={orden} setOrden={setOrden} cancionGlobal={cancion} setCancionGlobal={setCancion}/>
           }
           {option===2&&<Folders setCategoria={setCategoria} setListado={setListado} setOption={setOption}/>}
-          CUARTO COMPONENTE <br/>
+          
+        </div>
+      </div>
+      
+    </div>
+  )
+}/*
+CUARTO COMPONENTE <br/>
           Componente reproductor, contiene play/pausa, siguiente, anterior, volumen <br/>
           Linea de duración de la canción <br/>
           [] Repetir canción<br/>
@@ -52,10 +59,4 @@ export default function Home() {
           [] No Repetir <br/>
           QUINTO COMPONENTE <br/>
           Si está reproduciendo, aparece un disco que gira, los colores dependen de la carpeta <br/>
-          Botón para atrás para volver al segundo o tercer Componente <br/>
-        </div>
-      </div>
-      
-    </div>
-  )
-}
+          Botón para atrás para volver al segundo o tercer Componente <br/>*/
