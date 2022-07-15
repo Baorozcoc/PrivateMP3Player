@@ -123,12 +123,14 @@ const Player=({listado,Titulo, setTitulo,cancion,setCancion,Autor,setAutor,Categ
         }
         setReproduciendo(0);
     }
-    for (let e of document.querySelectorAll('input[type="range"]')) {
-        e.style.setProperty('--value', e.value);
-        e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-        e.style.setProperty('--max', e.max == '' ? '100' : e.max);
-        e.addEventListener('input', () => e.style.setProperty('--value', e.value));
-      }
+    if(typeof window !== 'undefined'){
+        for (let e of window.document.querySelectorAll('input[type="range"]')) {
+            e.style.setProperty('--value', e.value);
+            e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+            e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+            e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+        }
+    }
     return(
         <div className="position-absolute d-flex flex-column align-items-center bottom-0 w-100">
             <div>
