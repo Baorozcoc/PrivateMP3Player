@@ -5,6 +5,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+.initial{
+  font-size: 50px !important;
+}
 
 a {
   color: inherit;
@@ -61,6 +64,7 @@ a {
 	background-attachment: scroll;
 	background-size: cover;
   width:45%;
+  min-width: 260px;
 }
 .Salsa{
   background-image:linear-gradient(to bottom, rgba(17, 17, 17, 0.1), rgb(0, 0, 0)), url('../public/Salsa.jpg');
@@ -83,6 +87,12 @@ a {
 .Instrum{
   background-image:linear-gradient(to bottom, rgba(17, 17, 17, 0.1), rgba(0, 0, 0, 0.9)), url('../public/Instrumen.jpg');
 }
+.FondoSinOpcion{
+  background-image:linear-gradient(to bottom, rgba(17, 17, 17, 0.1), var(--first-color)), url('../public/Fondo.jpg');
+  background-repeat: no-repeat; 
+	background-attachment: scroll;
+	background-size: cover;
+}
 .inf-button{
   border-radius: 30px 30px 0px 0px !important;
   background-color: var(--second-color) !important;
@@ -93,10 +103,17 @@ a {
 .inf-button:hover{
   background-color: #3F4E4F !important;
 }
-
-
-
-
+.RepetirIco{
+  display: none !important;
+}
+@media screen and (max-width: 550px) {
+  .Repetir{
+    display: none !important;
+  }
+  .RepetirIco{
+    display: block !important;
+  }
+}
 input[type=range]{
   height: 2.2em;
   -webkit-appearance: none;

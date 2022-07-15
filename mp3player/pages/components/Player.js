@@ -27,6 +27,7 @@ const Player=({listado,Titulo, setTitulo,cancion,setCancion,Autor,setAutor,Categ
             setReproduciendo(1);
             setTiempo(0);
             setMaxTiempo(Duracion);
+            setPausado(0);
         }   
         if(tiempo>=maxTiempo){
             setTiempo(0);
@@ -143,26 +144,39 @@ const Player=({listado,Titulo, setTitulo,cancion,setCancion,Autor,setAutor,Categ
                 <div className="text-light h5 text-center">
                     {Titulo} - {Autor}
                 </div>
-                <div className="w-100 d-flex justify-content-evenly align-items-center text-light h6" >
-                {Math.trunc(tiempo/60)}:{toStr(tiempo%60)} <input type="range" id="time" className="time w-75" min="0" max={maxTiempo} step="1" value={tiempo} onChange={handleChangeTiempo}></input> {Math.trunc(maxTiempo/60)}:{toStr(maxTiempo%60)}
+                <div className="w-100 d-flex justify-content-center align-items-center text-light h6" >
+                {Math.trunc(tiempo/60)}:{toStr(tiempo%60)} <input type="range" id="time" className="time w-75 px-3" min="0" max={maxTiempo} step="1" value={tiempo} onChange={handleChangeTiempo}></input> {Math.trunc(maxTiempo/60)}:{toStr(maxTiempo%60)}
                 </div>
                 <div  className="w-100 d-flex justify-content-evenly align-items-center text-light h6">
-                    <div className="d-flex justify-content-center align-items-center text-light h6">
-                        Repetir: 
+                    <div className="d-flex justify-content-center align-items-center text-light h6 w-50">
+                        <div className="Repetir">Repetir:</div> 
                         {repetir==="No"
-                        ?<button className="btn btn-light mx-1">No</button>
-                        :<button className="btn btn-outline-light text-light mx-1" onClick={()=> setRepetir("No")}>No</button>
+                        ?<button className="btn btn-light mx-1 Repetir">No</button>
+                        :<button className="btn btn-outline-light text-light mx-1 Repetir" onClick={()=> setRepetir("No")}>No</button>
                         }
                         {repetir==="List"
-                        ?<button className="btn btn-light mx-1">Lista</button>
-                        :<button className="btn btn-outline-light text-light mx-1" onClick={()=> setRepetir("List")}>Lista</button>
+                        ?<button className="btn btn-light mx-1 Repetir">Lista</button>
+                        :<button className="btn btn-outline-light text-light mx-1 Repetir" onClick={()=> setRepetir("List")}>Lista</button>
                         }
                         {repetir==="Song"
-                        ?<button className="btn btn-light mx-1">Canción</button>
-                        :<button className="btn btn-outline-light text-light mx-1" onClick={()=> setRepetir("Song")}>Canción</button>
+                        ?<button className="btn btn-light mx-1 Repetir">Canción</button>
+                        :<button className="btn btn-outline-light text-light mx-1 Repetir" onClick={()=> setRepetir("Song")}>Canción</button>
+                        }
+
+                        {repetir==="No"
+                        ?<img className="btn btn-light mx-1 RepetirIco" src="/NoRepB.png" />
+                        :<img className="btn btn-outline-light text-light mx-1 RepetirIco" onClick={()=> setRepetir("No")} src="/NoRep.png" />
+                        }
+                        {repetir==="List"
+                        ?<img className="btn btn-light mx-1 RepetirIco" src="/ReSongB.png"/>
+                        :<img className="btn btn-outline-light text-light mx-1 RepetirIco" onClick={()=> setRepetir("List")} src="/ReSong.png"/>
+                        }
+                        {repetir==="Song"
+                        ?<img className="btn btn-light mx-1 RepetirIco" src="/ReFileB.png"/>
+                        :<img className="btn btn-outline-light text-light mx-1 RepetirIco" onClick={()=> setRepetir("Song")} src="/ReFile.png"/>
                         }
                     </div>
-                    <div className="d-flex justify-content-center align-items-center text-light h6">
+                    <div className="d-flex justify-content-center align-items-center text-light h6 w-50">
                         <img src="Volume.png"/>
                         <input type="range" id="volume" className="volume mx-2" min="0" max="1" step="0.01" value={volume} onChange={handleChangeVolume}></input> 
                     </div>

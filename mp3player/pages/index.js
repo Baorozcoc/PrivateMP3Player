@@ -31,37 +31,39 @@ export default function Home() {
       <div className='p-2 Logo h1'>
         <img src='/logo.png' alt='Logo' className='mx-2'/>MP3 Player
       </div>
+      {option===0?
+      <div className='FondoSinOpcion w-100 h-75 d-flex flex-column justify-content-center align-items-center p-2'>
+        <button type="button" onClick={()=> AllSongs()} className="btn btn-outline-primary w-100 fw-bolder initial p-2 m-2">Todas las canciones</button>
+        <button type="button" onClick={()=> setOption(2)} className="btn btn-outline-primary w-100 fw-bolder initial p-2 m-2">Por Categorias</button>
+        
+      </div>:
       <div className='mx-4 h-75'>
-        {option===1
-          ?<button type="button" onClick={()=> AllSongs()} className="btn btn-primary fw-bolder">Todas las canciones</button>
-          :<button type="button" onClick={()=> AllSongs()} className="btn btn-outline-primary fw-bolder">Todas las canciones</button>
-        }
-        {option===2
-          ?<button type="button" onClick={()=> setOption(2)} className="btn btn-primary fw-bolder">Por Categorias</button>
-          :<button type="button" onClick={()=> setOption(2)} className="btn btn-outline-primary fw-bolder">Por Categorias</button>
-        }
+        <button type="button" onClick={()=> AllSongs()} className="btn btn-outline-primary fw-bolder">Todas las canciones</button>
+        <button type="button" onClick={()=> setOption(2)} className="btn btn-outline-primary fw-bolder">Por Categorias</button>
+        
         {cancion!==null?
-        <div className='contenedor overflow-auto p-3 songs'>
+          <div className='contenedor overflow-auto p-3 songs'>
+            {option===1&&listado.length!==0&&
+              <List listado={listado} setListado={setListado} orden={orden} setOrden={setOrden} cancionGlobal={cancion} setCancionGlobal={setCancion} setReproduciendo={setReproduciendo} setTitulo={setTitulo} tituloActual={titulo} setAutor={setAutor} setDuracion={setDuracion} setCategoria={setCategoria}/>
+            }
+            {option===2&&<Folders setCategoria={setCategoria} setListado={setListado} setOption={setOption}/>}
+
+          </div>
+          :<div className='contenedor overflow-auto p-3 h-100'>
+          
           {option===1&&listado.length!==0&&
             <List listado={listado} setListado={setListado} orden={orden} setOrden={setOrden} cancionGlobal={cancion} setCancionGlobal={setCancion} setReproduciendo={setReproduciendo} setTitulo={setTitulo} tituloActual={titulo} setAutor={setAutor} setDuracion={setDuracion} setCategoria={setCategoria}/>
           }
           {option===2&&<Folders setCategoria={setCategoria} setListado={setListado} setOption={setOption}/>}
 
-        </div>
-        :<div className='contenedor overflow-auto p-3 h-100'>
-        {option===1&&listado.length!==0&&
-          <List listado={listado} setListado={setListado} orden={orden} setOrden={setOrden} cancionGlobal={cancion} setCancionGlobal={setCancion} setReproduciendo={setReproduciendo} setTitulo={setTitulo} tituloActual={titulo} setAutor={setAutor} setDuracion={setDuracion} setCategoria={setCategoria}/>
-        }
-        {option===2&&<Folders setCategoria={setCategoria} setListado={setListado} setOption={setOption}/>}
-
+        </div>}
+        
+        
       </div>}
-        
-        
-      </div>
       {cancion!==null&&<Player listado={listado} cancion={cancion} setCancion={setCancion} reproduciendo={reproduciendo} setReproduciendo={setReproduciendo} Titulo={titulo} Autor={autor} Categoria={categoria} Duracion={duracion} setTitulo={setTitulo} tituloActual={titulo} setAutor={setAutor} setDuracion={setDuracion} setCategoria={setCategoria} repetir={repetir} setRepetir={setRepetir}/>}
     </div>
   )
-}/*
-          QUINTO COMPONENTE <br/>
-          Si está reproduciendo, aparece un disco que gira, los colores dependen de la carpeta <br/>
-          Botón para atrás para volver al segundo o tercer Componente <br/>*/
+}
+/*
+{option===0&&<div className='FondoSinOpcion w-100 h-100'>aasdasda</div>}
+*/
