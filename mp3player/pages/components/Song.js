@@ -17,19 +17,28 @@ function Contenido(Titulo,Autor,Duracion){
     )
     return contenido;
 }
-const Song=({Titulo, Autor, Duracion, Categoria, Ubicacion,setCancion})=>{
+const Song=({Titulo, Autor, Duracion, Categoria, Ubicacion,cancion,setCancion,setReproduciendo,setTitulo,tituloActual, setAutor, setDuracion, setCategoria})=>{
     function Sonar(){
+        if(cancion!==null){
+            cancion.pause();
+        }
         setCancion(new Audio(Ubicacion));
+        setReproduciendo(0);
+        setTitulo(Titulo);
+        setAutor(Autor);
+        setCategoria(Categoria);
+        setDuracion(Duracion);
     }
     return(
         <div onClick={()=> Sonar()}>
-            {Categoria==="Salsa"&&<div className="bg-primary rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
-            {Categoria==="Romantica"&&<div className="bg-secondary rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
-            {Categoria==="Pop"&&<div className="bg-success rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
-            {Categoria==="RockEng"&&<div className="bg-info rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
-            {Categoria==="RockEsp"&&<div className="bg-warning rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
-            {Categoria==="Electrosw"&&<div className="bg-danger rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
-            {Categoria==="Instrumental"&&<div className="bg-dark rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {Categoria==="Salsa"&&tituloActual!==Titulo&&<div className="bg-primary rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {Categoria==="Romantica"&&tituloActual!==Titulo&&<div className="bg-secondary rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {Categoria==="Pop"&&tituloActual!==Titulo&&<div className="bg-success rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {Categoria==="RockEng"&&tituloActual!==Titulo&&<div className="bg-info rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {Categoria==="RockEsp"&&tituloActual!==Titulo&&<div className="bg-warning rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {Categoria==="Electrosw"&&tituloActual!==Titulo&&<div className="bg-danger rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {Categoria==="Instrumental"&&tituloActual!==Titulo&&<div className="bg-dark rounded-3 text-light toChoose">{Contenido(Titulo,Autor,Duracion)}</div>}
+            {tituloActual===Titulo&&<div className="bg-light rounded-3 toChoose">{Contenido(Titulo,Autor,Duracion)}<div className="m-2 p-1 fw-bolder">Reproduciendo...</div></div>}
             
         </div>
     )

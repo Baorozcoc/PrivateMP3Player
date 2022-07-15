@@ -1,6 +1,6 @@
 import Song from "./Song";
 
-const List=({listado,setListado,orden,setOrden,cancionGlobal,setCancionGlobal})=>{
+const List=({listado,setListado,orden,setOrden,cancionGlobal,setCancionGlobal,setReproduciendo, setTitulo, tituloActual, setAutor, setDuracion, setCategoria})=>{
     function OrdenarArtista(x,y){
         if(x.Autor<y.Autor){return -1}
         if(x.Autor>y.Autor){return 1}
@@ -39,9 +39,6 @@ const List=({listado,setListado,orden,setOrden,cancionGlobal,setCancionGlobal})=
             setListado(arr2)
         }
     }
-    function ReproducirCancion(){
-        
-    }
     return(
     <div>
         {listado!==[]&&
@@ -62,10 +59,8 @@ const List=({listado,setListado,orden,setOrden,cancionGlobal,setCancionGlobal})=
                 {orden==="Alfabetico"?<button className="btn btn-primary m-1">Alfabético</button>:<button className="btn btn-outline-primary m-1" onClick={()=> CambiarOrden("Alfabetico")}>Alfabético</button>}
             </div>
             {listado?.map((cancion,index)=>(
-                <Song key={index} Titulo={cancion.Titulo} Autor={cancion.Autor} Duracion={cancion.Duracion} Categoria={cancion.Categoria} Ubicacion={cancion.Ubicacion} setCancion={setCancionGlobal}/>
+                <Song key={index} Titulo={cancion.Titulo} Autor={cancion.Autor} Duracion={cancion.Duracion} Categoria={cancion.Categoria} Ubicacion={cancion.Ubicacion} cancion={cancionGlobal} setCancion={setCancionGlobal} setReproduciendo={setReproduciendo} setTitulo={setTitulo} tituloActual={tituloActual} setAutor={setAutor} setDuracion={setDuracion} setCategoria={setCategoria}/>
             ))}
-            {cancionGlobal!==null&&<button className="btn btn-outline-primary" onClick={()=> cancionGlobal.play()}>Reproducir </button>}
-            {cancionGlobal!==null&&<button className="btn btn-outline-primary" onClick={()=> cancionGlobal.pause()}>Pause </button>}
         </div>
         }
     </div>
