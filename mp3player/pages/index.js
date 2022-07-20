@@ -20,6 +20,8 @@ export default function Home() {
   function AllSongs(){
     setListado(Songs.songs);
     setOption(1);
+    document.documentElement.style.setProperty('--first-color', '#fff');
+                document.documentElement.style.setProperty('--second-color', '#000');
   }
   return (
     <div className='fondo w-100 vh-100'>

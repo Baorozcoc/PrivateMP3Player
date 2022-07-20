@@ -59,7 +59,7 @@ const List=({listado,setListado,orden,setOrden,cancionGlobal,setCancionGlobal,se
                 {orden==="Alfabetico"?<button className="btn btn-primary m-1">Alfabético</button>:<button className="btn btn-outline-primary m-1" onClick={()=> CambiarOrden("Alfabetico")}>Alfabético</button>}
             </div>
             {listado?.map((cancion,index)=>(
-                <Song key={index} Titulo={cancion.Titulo} Autor={cancion.Autor} Duracion={cancion.Duracion} Categoria={cancion.Categoria} Ubicacion={cancion.Ubicacion} cancion={cancionGlobal} setCancion={setCancionGlobal} setReproduciendo={setReproduciendo} setTitulo={setTitulo} tituloActual={tituloActual} setAutor={setAutor} setDuracion={setDuracion} setCategoria={setCategoria}/>
+                <Song key={index} ID={index} Titulo={cancion.Titulo} Autor={cancion.Autor} Duracion={cancion.Duracion} Categoria={cancion.Categoria} Ubicacion={cancion.Ubicacion} cancion={cancionGlobal} setCancion={setCancionGlobal} setReproduciendo={setReproduciendo} setTitulo={setTitulo} tituloActual={tituloActual} setAutor={setAutor} setDuracion={setDuracion} setCategoria={setCategoria}/>
             ))}
         </div>
         }
