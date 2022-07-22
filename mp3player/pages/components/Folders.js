@@ -4,44 +4,44 @@ const Folders=({setCategoria,setListado,setOption})=>{
     function Select(i){
         switch (i) {
             case 1:
-                document.documentElement.style.setProperty('--first-color', '#DCD7C9');
-                document.documentElement.style.setProperty('--second-color', '#A27B5C');
+                document.documentElement.style.setProperty('--first-color', '#FEF1E6');
+                document.documentElement.style.setProperty('--second-color', '#FFB085');
                 setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Salsa"));
                 setCategoria("Salsa");
                 break;
             case 2:
-                document.documentElement.style.setProperty('--first-color', '#FFE3A9');
-                document.documentElement.style.setProperty('--second-color', '#D38F8B');
+                document.documentElement.style.setProperty('--first-color', '#FFF9CA');
+                document.documentElement.style.setProperty('--second-color', '#E0B67F');
                 setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Romantica"));
                 setCategoria("Romantica");
                 break;
             case 3:
-                document.documentElement.style.setProperty('--first-color', '#E4DCCF');
-                document.documentElement.style.setProperty('--second-color', '#7D9D9C');
+                document.documentElement.style.setProperty('--first-color', '#EEE6CD');
+                document.documentElement.style.setProperty('--second-color', '#90C8AC');
                 setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Pop"));
                 setCategoria("Pop");
                 break;
             case 4:
-                document.documentElement.style.setProperty('--first-color', '#E7AB79');
-                document.documentElement.style.setProperty('--second-color', '#B25068');
+                document.documentElement.style.setProperty('--first-color', '#E3BFA1');
+                document.documentElement.style.setProperty('--second-color', '#641C1C');
                 setListado(Songs.songs.filter(cancion=>cancion.Categoria==="RockEng"));
                 setCategoria("RockEng");
                 break;
             case 5:
                 document.documentElement.style.setProperty('--first-color', '#FFE5B4');
-                document.documentElement.style.setProperty('--second-color', '#E8AA42');
+                document.documentElement.style.setProperty('--second-color', '#7F99CB');
                 setListado(Songs.songs.filter(cancion=>cancion.Categoria==="RockEsp"));
                 setCategoria("RockEsp");
                 break;   
             case 6:
-                document.documentElement.style.setProperty('--first-color', '#B3E8E5');
-                document.documentElement.style.setProperty('--second-color', '#3BACB6');
+                document.documentElement.style.setProperty('--first-color', '#9FE3C6');
+                document.documentElement.style.setProperty('--second-color', '#38A3A5');
                 setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Electrosw")); 
                 setCategoria("Electrosw");   
                 break;
             case 7:
-                document.documentElement.style.setProperty('--first-color', '#EEEEEE');
-                document.documentElement.style.setProperty('--second-color', '#476072');
+                document.documentElement.style.setProperty('--first-color', '#E2F2F2');
+                document.documentElement.style.setProperty('--second-color', '#3A7778');
                 setListado(Songs.songs.filter(cancion=>cancion.Categoria==="Instrumental"));
                 setCategoria("Instrumental");    
                 break;

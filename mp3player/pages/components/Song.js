@@ -31,13 +31,13 @@ const Song=({ID, Titulo, Autor, Duracion, Categoria, Ubicacion,cancion,setCancio
     }
     return(
         <div onClick={()=> Sonar()}>
-            {Categoria==="Salsa"&&tituloActual!==Titulo&&<div className="bg-primary rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
+            {Categoria==="Salsa"&&tituloActual!==Titulo&&<div className="bg-dark rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
             {Categoria==="Romantica"&&tituloActual!==Titulo&&<div className="bg-secondary rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
             {Categoria==="Pop"&&tituloActual!==Titulo&&<div className="bg-success rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
             {Categoria==="RockEng"&&tituloActual!==Titulo&&<div className="bg-info rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
             {Categoria==="RockEsp"&&tituloActual!==Titulo&&<div className="bg-warning rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
             {Categoria==="Electrosw"&&tituloActual!==Titulo&&<div className="bg-danger rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
-            {Categoria==="Instrumental"&&tituloActual!==Titulo&&<div className="bg-dark rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
+            {Categoria==="Instrumental"&&tituloActual!==Titulo&&<div className="bg-primary rounded-3 text-light toChoose">{Contenido(ID,Titulo,Autor,Duracion)}</div>}
             {tituloActual===Titulo&&<div className="bg-light rounded-3 toChoose">{Contenido(ID,Titulo,Autor,Duracion)}<div className="m-2 p-1 fw-bolder">Reproduciendo...</div></div>}
             
         </div>

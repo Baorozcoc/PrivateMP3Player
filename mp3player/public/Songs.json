@@ -589,7 +589,9 @@
         {"ID":585,"Titulo":"Route 66","Autor":"Peggy Suave","Duracion":183, "Categoria":"Electrosw","Ubicacion":"/Songs/Electrosw/route 66.mp3"},
         {"ID":586,"Titulo":"Throw it back","Autor":"Proleter","Duracion":179, "Categoria":"Electrosw","Ubicacion":"/Songs/Electrosw/throw it back.mp3"},
         {"ID":587,"Titulo":"Crazy Frog","Autor":"Axel F","Duracion":173, "Categoria":"Electrosw","Ubicacion":"/Songs/Electrosw/crazy frog.mp3"},
-        {"ID":588,"Titulo":"MIX Caravan Palace","Autor":"Caravan Palace","Duracion":6126, "Categoria":"Electrosw","Ubicacion":"/Songs/Electrosw/mix caravan palace.mp3"}
+        {"ID":588,"Titulo":"MIX Caravan Palace","Autor":"Caravan Palace","Duracion":3726, "Categoria":"Electrosw","Ubicacion":"/Songs/Electrosw/mix caravan palace.mp3"},
+        {"ID":589,"Titulo":"Valse Sentimentale","Autor":"Unknown","Duracion":284, "Categoria":"Instrumental","Ubicacion":"/Songs/Instrumental/Valse Sentimentale.mp3"},
+        {"ID":590,"Titulo":"Don't stop me now","Autor":"Queen","Duracion":212, "Categoria":"RockEng","Ubicacion":"/Songs/RockEng/dont stop me now.mp3"}
 
     ]
 }

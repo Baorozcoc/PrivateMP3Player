@@ -169,11 +169,11 @@ const Player=({listado,Titulo, setTitulo,cancion,setCancion,Autor,setAutor,Categ
                         }
                         {repetir==="List"
                         ?<img className="btn btn-light mx-1 RepetirIco" src="/ReSongB.png"/>
-                        :<img className="btn btn-outline-light text-light mx-1 RepetirIco" onClick={()=> setRepetir("List")} src="/ReSong.png"/>
+                        :<img className="btn btn-outline-light text-light mx-1 RepetirIco" onClick={()=> setRepetir("List")} src="/ReFile.png"/>
                         }
                         {repetir==="Song"
                         ?<img className="btn btn-light mx-1 RepetirIco" src="/ReFileB.png"/>
-                        :<img className="btn btn-outline-light text-light mx-1 RepetirIco" onClick={()=> setRepetir("Song")} src="/ReFile.png"/>
+                        :<img className="btn btn-outline-light text-light mx-1 RepetirIco" onClick={()=> setRepetir("Song")} src="/ReSong.png"/>
                         }
                     </div>
                     <div className="d-flex justify-content-center align-items-center text-light h6 w-50">
